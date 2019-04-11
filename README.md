@@ -70,19 +70,19 @@ Key-value pairs cannot span multiple lines.
 
 #### Examples
 
-##### Example
+##### Example 1
 ```PowerShell
 $notes = Get-ScriptVersion
 ```
 Returns the contents of the NOTES section of the calling script.
 
-##### Example
+##### Example 2
 ```PowerShell
 $notes = Get-ScriptVersion -ScriptPath "C:\Scripts\MyScript.ps1"
 ```
 Returns the contents of the NOTES section of the specified script.
 
-##### Example
+##### Example 3
 ```PowerShell
 $version = (Get-ScriptVersion)["version"]
 ```
