@@ -121,5 +121,4 @@ HelpInfoURI = 'https://github.com/alekdavis/ScriptVersion/blob/master/README.md'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
-
 }
