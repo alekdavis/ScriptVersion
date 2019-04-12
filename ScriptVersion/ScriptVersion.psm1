@@ -39,6 +39,9 @@ Returns the contents of the NOTES section of the specified script.
 .EXAMPLE
 $version = (Get-ScriptVersion)["version"]
 Returns the value of the 'version' element of the NOTES section of the calling script.
+
+.LINK
+https://github.com/alekdavis/ScriptVersion
 #>
 
 function Get-ScriptVersion {
