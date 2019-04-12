@@ -21,9 +21,9 @@ separated by colons (':'), such as:
   version   : 1.2.0
   copyright : (c) My Company 2019
 
-MAKE SURE THAT THE COMMENT HEADER IS AT THE TOP OF THE SCRIPT AND IS PRECEDED
-AND FOLLOWED BY AT LEAST ONE BLANK LINE; OTHERWISE, GET-HELP AND GETVERSION 
-COMMANDS WILL NOT WORK.
+MAKE SURE THAT THE COMMENT HEADER IS AT THE TOP OF THE SCRIPT AND IS FOLLOWED BY 
+AT LEAST ONE BLANK LINE. For additional information about the comment help header
+see About Comment Based Help: SYNTAX FOR COMMENT-BASED HELP at Microsoft documentation.
 
 .PARAMETER ScriptPath
 Optional path to the script. If not specified, the calling script will be used.
@@ -130,5 +130,4 @@ function Get-ScriptVersion {
     return $notes
 }
 
-#------------------------------------------------------------------------------
 Export-ModuleMember -Function *
