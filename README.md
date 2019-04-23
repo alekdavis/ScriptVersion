@@ -64,9 +64,13 @@ https://github.com/alekdavis/ScriptVersion
 
 Please follow the [SYNTAX FOR COMMENT-BASED HELP](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6#syntax-for-comment-based-help) rules.
 
-##### Limitations
+#### Limitations
 
 Key-value pairs cannot span multiple lines.
+
+#### Usage
+
+You can download a copy of the module from the [Github repository](ScriptVersion) or install it from the [PowerShell Gallery](https://www.powershellgallery.com/packages/ScriptVersion/1.0.0).
 
 #### Examples
 
