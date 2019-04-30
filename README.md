@@ -70,9 +70,47 @@ Key-value pairs cannot span multiple lines.
 
 #### Usage
 
-You can download a copy of the module from the [Github repository](ScriptVersion) or install it from the [PowerShell Gallery](https://www.powershellgallery.com/packages/ScriptVersion/1.0.0).
+You can download a copy of the module from the [Github repository](ScriptVersion) or install it from the [PowerShell Gallery](https://www.powershellgallery.com/packages/ScriptVersion) (see [Examples](#Examples)).
 
 #### Examples
+
+##### Example 1
+```PowerShell
+function LoadModule {
+    param(
+        [string]
+        $ModuleName
+    )
+
+    if (!(Get-Module -Name $ModuleName)) {
+
+        if (!(Get-Module -Listavailable -Name $ModuleName)) {
+            Install-Module -Name $ModuleName -Force -Scope CurrentUser -ErrorAction Stop
+        }
+
+        Import-Module $ModuleName -ErrorAction Stop -Force
+    }
+}
+
+$modules = @("ScriptVersion")
+foreach ($module in $modules) {
+    try {
+        LoadModule -ModuleName $module
+    }
+    catch {
+        throw (New-Object System.Exception "Cannot load module $module.", $_.Exception)
+    }
+}
+```
+Downloads the `ScriptVersion` module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/ScriptVersion) into the PowerShell modules folder for the current user and imports it into the running script.
+
+##### Example 2
+```PowerShell
+$modulePath = Join-Path (Split-Path -Path $PSCommandPath -Parent) 'ScriptVersion.psm1'
+Import-Module $modulePath -ErrorAction Stop -Force
+```
+Imports the `ScriptVersion` module from the same directory as the running script.
+
 
 ##### Example 1
 ```PowerShell
