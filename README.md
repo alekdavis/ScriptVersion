@@ -112,19 +112,19 @@ Import-Module $modulePath -ErrorAction Stop -Force
 Imports the `ScriptVersion` module from the same directory as the running script.
 
 
-##### Example 1
+##### Example 3
 ```PowerShell
 $notes = Get-ScriptVersion
 ```
 Returns the contents of the NOTES section of the calling script.
 
-##### Example 2
+##### Example 4
 ```PowerShell
 $notes = Get-ScriptVersion -ScriptPath "C:\Scripts\MyScript.ps1"
 ```
 Returns the contents of the NOTES section of the specified script.
 
-##### Example 3
+##### Example 5
 ```PowerShell
 $version = (Get-ScriptVersion)["version"]
 ```
