@@ -29,10 +29,6 @@ Path to the PowerShell script file. If the path is not specified, the calling sc
 
 The character (or string) that separates key-value version information entries. The default value is `:`.
 
-`-Json`
-
-A shortcut for `-Format Json`.
-
 `-CommentIndicator`
 
 The string that indicates that the version entry contains a comment and should not be processed. The default value is `#`.
